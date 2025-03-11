@@ -47,7 +47,8 @@ export default function Index() {
           <View className="flex-1">
             <SearchBar
               onPress={() => router.push("/search")}
-              placeholder="Search for a movie..."
+              placeholder="Search for a movie"
+              editable={false}
             />
             <>
               <Text className="text-lg text-white font-bold mt-5 mb-3">

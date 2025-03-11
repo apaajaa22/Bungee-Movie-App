@@ -5,6 +5,7 @@ import { icons } from "@/constants/icons";
 interface Props {
   placeholder: string;
   value: string;
+  editable: boolean;
   onPress: () => void;
   onChangeText: (text: string) => void;
 }
@@ -14,6 +15,7 @@ const SearchBar = ({
   onPress,
   value,
   onChangeText,
+  editable = true,
 }: Partial<Props>) => {
   return (
     <View className="flex-row items-center bg-dark-200 rounded-full px-5 py-4">
@@ -30,6 +32,7 @@ const SearchBar = ({
         onChangeText={onChangeText}
         placeholderTextColor={"#a8b5db"}
         className="flex-1 ml-2 text-white"
+        editable={editable}
       />
     </View>
   );
